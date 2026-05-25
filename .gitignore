@@ -1,0 +1,14 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+.env
+
+# Ingest outputs (re-download with ingest.py)
+data/
+logs/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
