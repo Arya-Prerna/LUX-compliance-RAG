@@ -20,9 +20,19 @@ python3 src/ingest.py
 
 PDFs are saved under `data/` (gitignored). Logs go to `logs/ingest.log`.
 
+## Parse & chunk (phase 2)
+
+Extracts text from `data/*.pdf` (per-page metadata) and chunks with `langchain-text-splitters`:
+
+```bash
+python3 src/parser.py
+```
+
+Output: `data/chunks/chunks.jsonl`. Logs: `logs/parser.log`.
+
 ## Status
 
 - [x] RSS discovery → document pages → PDF download
-- [ ] Text extraction (`pypdf`)
-- [ ] Chunking, embeddings, vector store
+- [x] Text extraction (`pypdf`) + chunking (`langchain-text-splitters`)
+- [ ] Embeddings + vector store
 - [ ] Query / RAG answers
