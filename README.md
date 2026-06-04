@@ -2,6 +2,12 @@
 
 Luxembourg financial compliance RAG — ingest CSSF circulars and build a retrieval pipeline.
 
+### ✧ Key Features:
+1. Multilingual Semantic Search: Uses paraphrase-multilingual-MiniLM to query French/German regulations in English.
+2. Vectorized Knowledge Base: 600+ chunks stored in a local Qdrant instance.
+3. Regulatory Citations: Provides specific PDF page numbers for auditability.
+4. High-Speed Inference: Integrated with Groq LPU for near-instant responses.
+
 ## Setup
 
 ```bash
