@@ -30,9 +30,19 @@ python3 src/parser.py
 
 Output: `data/chunks/chunks.jsonl`. Logs: `logs/parser.log`.
 
+## Vector store (phase 3)
+
+Embeds chunks with `paraphrase-multilingual-MiniLM-L12-v2` and stores them in local Qdrant:
+
+```bash
+python3 src/vector_store.py
+```
+
+Database: `data/qdrant_db/`. Logs: `logs/vector_store.log`. Re-running rebuilds the collection from scratch.
+
 ## Status
 
 - [x] RSS discovery → document pages → PDF download
 - [x] Text extraction (`pypdf`) + chunking (`langchain-text-splitters`)
-- [ ] Embeddings + vector store
+- [x] Embeddings + vector store (Qdrant + sentence-transformers)
 - [ ] Query / RAG answers
